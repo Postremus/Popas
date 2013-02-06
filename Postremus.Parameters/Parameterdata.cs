@@ -32,7 +32,18 @@ namespace Postremus.Parameters
 
         public void Add(string key, object value)
         {
-            _dic.Add(key, value);
+            if (!_dic.ContainsKey(key))
+            {
+                _dic.Add(key, value);
+            }
+            else
+            {
+                object currValue = _dic[key];
+                List<object> toAdd = new List<object>();
+                toAdd.Add(currValue);
+                toAdd.Add(value);
+                _dic.Add(key, toAdd);
+            }
         }
 
         /// <summary>
@@ -48,6 +59,10 @@ namespace Postremus.Parameters
             if (!_dic.ContainsKey(key))
             {
                 return false;
+            }
+            if (String.IsNullOrEmpty(key.Trim()))
+            {
+                key = null;
             }
             try
             {

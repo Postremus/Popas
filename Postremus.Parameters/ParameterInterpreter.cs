@@ -19,10 +19,15 @@ namespace Postremus.Parameters
                 return ret;
             }
             int idx;
-            foreach (string arg in args)
+            for (int i = 0; i < args.Length; i++)
             {
-                if (arg != null)
+                string arg = args[i];
+                if (!String.IsNullOrEmpty(arg.Trim()))
                 {
+                    if (arg.StartsWith("--"))
+                    {
+                        arg = arg.Remove(0, 1);
+                    }
                     if (arg[0] == '/' || arg[0] == '-' || arg[0] == '?')
                     {
                         idx = arg.Contains(':') ? arg.IndexOf(':') : arg.Contains('=') ? arg.IndexOf('=') : -1;
