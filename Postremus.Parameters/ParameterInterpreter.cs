@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Postremus.Parameters
+namespace Popas
 {
     [assembly: CLSCompliant(true)]
     public sealed class ParameterInterpreter

@@ -7,8 +7,8 @@
     <ProjectGuid>{B7D06555-8108-461C-BCD8-AFA256A9D58F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Postremus.Parameters</RootNamespace>
-    <AssemblyName>Postremus.Parameters</AssemblyName>
+    <RootNamespace>Popas</RootNamespace>
+    <AssemblyName>Popas</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
