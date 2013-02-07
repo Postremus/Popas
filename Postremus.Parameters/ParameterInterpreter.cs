@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Postremus.Parameters
 {
+    [assembly: CLSCompliant(true)]
     public sealed class ParameterInterpreter
     {
         public ParameterInterpreter()
