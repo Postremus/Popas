@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+[assembly: System.CLSCompliant(true)]
 namespace Popas
 {
-    [assembly: CLSCompliant(true)]
     public sealed class ParameterInterpreter
     {
         public ParameterInterpreter()
