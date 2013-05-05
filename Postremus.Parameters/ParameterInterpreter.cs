@@ -29,20 +29,22 @@ namespace Popas
                     {
                         arg = arg.Remove(0, 1);
                     }
+                    int first = 0;
                     if (arg[0] == '/' || arg[0] == '-' || arg[0] == '?')
                     {
-                        idx = arg.Contains(':') ? arg.IndexOf(':') : arg.Contains('=') ? arg.IndexOf('=') : -1;
+                        first = 1;
+                    }
+                    idx = arg.Contains(':') ? arg.IndexOf(':') : arg.Contains('=') ? arg.IndexOf('=') : -1;
 
-                        if (idx >= 0)
-                        {
-                            string key = arg.Substring(1, idx - 1);
-                            ret.Add(key, arg.Substring(idx + 1));
-                        }
-                        else
-                        {
-                            string key = arg.Substring(1);
-                            ret.Add(key, true);
-                        }
+                    if (idx >= 0)
+                    {
+                        string key = arg.Substring(first, idx - first);
+                        ret.Add(key, arg.Substring(idx + 1));
+                    }
+                    else
+                    {
+                        string key = arg.Substring(first);
+                        ret.Add(key, true);
                     }
                 }
             }
